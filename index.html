@@ -4,13 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Car Rental Reservations</title>
+    <title>Mr.Johnson's Car Rental</title>
   </head>
+
   <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-    <script src="index.js"></script>
+
+    <h1>Welcome to Mr. Johnson's Vehicle Rental Service</h1>  
+    <h2>Please submit the following form to rend a vehicle</h1>  
+
+      <div class = "container">
+        <form action="" id = "reservationForm">
+
+          
+        <div class = "name">
+          <label for="vehicletype"> Full Name:  </label>
+          <input type = "text" id = "name" />
+        </div> <br>
+      
+          <label for="vehicletype">Vehicle Type: </label>
+          <select name="vehicletype" id="vehicletype">
+            <option>Select an option</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Minivan">Minivan</option>
+            <option value="SUV">SUV</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Truck">Truck</option>
+          </select><br><br>
+
+          <div class = "pickup">
+            <label for="pickup">Pick Up Date (MM/DD/YYYY) </label>
+            <input type = "text" id = "pickup" />
+          </div> <br>
+
+          <div class = "dropoff">
+            <label for="dropoff">Drop Off Date (MM/DD/YYYY) </label>
+            <input type = "text" id = "dropoff" placeholder = "Drop Off Date (MM/DD/YYYY)" />
+          </div> <br>
+
+          <div class = "extension">
+            <label for="extension">Request Extension? Yes/No: </label>
+            <input type = "text" id = "extension" placeholder = "Request Extension? Yes/No" />
+          </div> <br>
+      
+        <div class = "button_container">
+          <button type = "submit" > Submit </button>
+        </div>
+      </form>
+    </div>
+
+    <script src = https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js ></script>
+    <script src = "./index.js" ></script>
+
   </body>
-</html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDVxKbhPpruILcuIBXE5K0FFZsVcieTH-s",
+      authDomain: "cmpsc487-assignment1.firebaseapp.com",
+      projectId: "cmpsc487-assignment1",
+      storageBucket: "cmpsc487-assignment1.appspot.com",
+      messagingSenderId: "1085370581836",
+      appId: "1:1085370581836:web:e56f95ca5e66c1a5ce85e9"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    window.save = function() {
+        const form = document.getElementById('rentalForm');
+        const name = form.name.value;
+        const vehicleType = form.vehicletype.value;
+        const pickup = form.pickup.value;
+        const dropoff = form.dropoff.value;
+        const extension = form.extension.value;
+
+        const rentalRequestId = Date.now();
+
+       set(ref(database, 'rentals/' + rentalRequestId), {
+        name: name,
+        vehicleType: vehicleType,
+        pickup: pickup,
+        dropoff: dropoff,
+        extension: extension
+      })
+      .then(() => {
+          console.log("Form submitted!");
+          form.reset(); // Optionally reset the form after submission
+        });
+    };
+
+    </script>
+  </body> -->
+<!-- </html> -->
 
