@@ -23,6 +23,21 @@ function submitForm(e) {
   var dropoff = document.getElementById('dropoff').value
   var extension = document.getElementById('extension').value
 
-// console.log(name, vehicletype, pickup, dropoff, extension); 
+  saveReservation(name, vehicletype, pickup, dropoff, extension); 
+
+  document.getElementById('reservationForm').reset();
+
 }
+
+const saveReservation = (name, vehicletype, pickup, dropoff, extension) => {
+  var newResForm = ReservationDB.push(); 
+
+  newResForm.set({
+    name : name,
+    vehicletype : vehicletype,
+    pickup : pickup,
+    dropoff : dropoff,
+    extension : extension
+  }); 
+};
 
