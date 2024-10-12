@@ -12,5 +12,5 @@ index.css
 Database: Firebase
 Programmming Languages: Javascript, HTML, CSS
 
-Please see the video recording of this assigment. 
-The video shows the table after a few test entries were made. One new entry is added and the table updates for Mr. Johnson.
+Please see the video recording of this assigment and select "view raw" to download the zip file.
+The video shows the table after a few test entries were made. One new entry is added and the table updates for Mr. Johnson in the video.
